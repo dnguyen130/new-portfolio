@@ -11,8 +11,8 @@
     "lint:ts": "tslint --project tsconfig.json --config tslint.json"
   },
   "lint-staged": {
-    "*.ts": "yarn lint:ts",
-    "*.tsx": "yarn lint:ts"
+    "*.ts": "npm run lint:ts",
+    "*.tsx": "npm run lint:ts"
   },
   "husky": {
     "hooks": {
