@@ -1,6 +1,7 @@
 :root {
   --color-primary: #030911;
-  --color-accent: #2dd9ff;
+  --color-accent-blue: #2dd9ff;
+  --color-accent-green: #2dff50;
   --color-secondary: #fbfefe;
 
   font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -28,15 +29,6 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  color: var(--color-accent);
-  font-size: 64px;
-}
-
-p {
-  color: var(--color-secondary);
-}
-
 main {
   padding: 1rem;
 }
@@ -44,7 +36,8 @@ main {
 @media (prefers-color-scheme: light) {
   :root {
     --color-primary: #fbfefe;
-    --color-accent: #105fc6;
+    --color-accent-blue: #105fc6;
+    --color-accent-green: #0f750d;
     --color-secondary: #030911;
   }
 }

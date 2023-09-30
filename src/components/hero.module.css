@@ -1,9 +1,16 @@
-.container {
-  text-align: center;
+.container h1 {
+  font-size: 64px;
+  letter-spacing: 0.1rem;
+  font-weight: 900;
+  font-variant: small-caps;
+  color: var(--color-accent-blue);
+  margin: 0;
 }
 
-.container h1 {
-  font-weight: 600;
-  letter-spacing: 0.2rem;
-  font-variant: small-caps;
+.container h2 {
+  margin: 0;
+}
+
+.container p {
+  font-size: 18px;
 }
