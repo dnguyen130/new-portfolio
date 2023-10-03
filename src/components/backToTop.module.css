@@ -1,0 +1,19 @@
+.container {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  border-radius: 100px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.container:hover {
+  background-color: var(--color-accent-green);
+}
