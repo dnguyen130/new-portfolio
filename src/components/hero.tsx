@@ -4,15 +4,19 @@ import { Autoplay } from "swiper/modules";
 import { TbChevronsDown } from "react-icons/tb";
 
 import styles from "./hero.module.css";
+import stars from "@/assets/stars.jpg";
 import "swiper/css";
 
 export default function Hero(): ReactElement {
   return (
     <>
-      <header className={styles.container}>
-        <h3>Ahoy, I am</h3>
+      <div
+        className={styles.container_background}
+        style={{ backgroundImage: `url(${stars})` }}
+      />
+      <div className={styles.container}>
+        <h3>Hi, I'm</h3>
         <h1>Danny Nguyen</h1>
-        <h2>I am a</h2>
         <Swiper
           modules={[Autoplay]}
           freeMode
@@ -30,12 +34,6 @@ export default function Hero(): ReactElement {
             <h2>web developer</h2>
           </SwiperSlide>
           <SwiperSlide>
-            <h2>front end developer</h2>
-          </SwiperSlide>
-          <SwiperSlide>
-            <h2>back end developer</h2>
-          </SwiperSlide>
-          <SwiperSlide>
             <h2>full stack developer</h2>
           </SwiperSlide>
           <SwiperSlide>
@@ -44,7 +42,7 @@ export default function Hero(): ReactElement {
         </Swiper>
         <p>Creating content for the web.</p>
         <p>Currently working on projects while seeking career opportunities.</p>
-      </header>
+      </div>
       <a className={styles.next_page} href="#about">
         <TbChevronsDown size="100%" />
       </a>

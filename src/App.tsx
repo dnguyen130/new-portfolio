@@ -38,7 +38,8 @@ function App() {
     <div className="page_cont">
       <Nav
         active={active}
-        onClick={() => setActive(!active)}
+        onIconClick={() => setActive(!active)}
+        onLinkClick={() => setActive(false)}
         activeSection={activeSection}
       />
       <BackToTop isVisible={activeSection !== "home" ? true : false} />

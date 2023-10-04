@@ -3,14 +3,12 @@ import Hero from "@/components/hero";
 
 export default function Home(): ReactElement {
   return (
-    <>
-      <div className="spin" />
+    <div className="home_cont">
+      {/* <div className="spin" /> */}
       <div className="splash_border" />
       <section className="splash" id="home">
-        <main>
-          <Hero />
-        </main>
+        <Hero />
       </section>
-    </>
+    </div>
   );
 }

@@ -10,17 +10,19 @@ import styles from "./nav.module.css";
 interface NavType {
   active: boolean;
   activeSection: string | null;
-  onClick: () => void;
+  onIconClick: () => void;
+  onLinkClick: () => void;
 }
 
 export default function Nav({
   active,
   activeSection,
-  onClick,
+  onIconClick,
+  onLinkClick,
 }: NavType): ReactElement {
   return (
     <nav className={styles.container}>
-      <div className={styles.hamburger} onClick={onClick}>
+      <div className={styles.hamburger} onClick={onIconClick}>
         <AnimatePresence>
           {!active && (
             <motion.div
@@ -61,20 +63,23 @@ export default function Nav({
             <a
               href="#home"
               className={activeSection === "home" ? styles.active_link : null}
+              onClick={onLinkClick}
             >
               Home
             </a>
             <a
               href="#about"
               className={activeSection === "about" ? styles.active_link : null}
+              onClick={onLinkClick}
             >
-              About Me
+              About
             </a>
             <a
               href="#projects"
               className={
                 activeSection === "projects" ? styles.active_link : null
               }
+              onClick={onLinkClick}
             >
               Projects
             </a>
@@ -83,8 +88,9 @@ export default function Nav({
               className={
                 activeSection === "contact" ? styles.active_link : null
               }
+              onClick={onLinkClick}
             >
-              Get in Touch
+              Contact
             </a>
           </motion.div>
         )}

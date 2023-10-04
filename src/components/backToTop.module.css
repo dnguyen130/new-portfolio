@@ -1,8 +1,8 @@
 .container {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   position: fixed;
-  right: 40px;
+  right: 60px;
   bottom: 40px;
   border-radius: 100px;
   background-color: var(--color-secondary);
@@ -16,4 +16,11 @@
 
 .container:hover {
   background-color: var(--color-accent-green);
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    right: 50%;
+    transform: translateX(calc(50% + 640px - 60px - 40px));
+  }
 }
