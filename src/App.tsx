@@ -28,11 +28,21 @@ function App() {
         }
       });
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (activeSection) {
+      history.replaceState(true, "", "#" + activeSection);
+    }
+    if (activeSection !== "home") {
+      setActive(false);
+    }
+  }, [activeSection]);
 
   return (
     <div className="page_cont">

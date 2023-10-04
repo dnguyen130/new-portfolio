@@ -19,13 +19,24 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   height: calc(100% - 50px);
-  border-radius: 5px;
-  box-shadow: inset 0 0 50px 20px var(--color-primary);
-  opacity: 0.4;
+  box-shadow: inset 0 0 100px 100px var(--color-primary);
   z-index: 1;
-  filter: blur(1px);
+  animation: gaussianblur 10s infinite ease-in-out alternate;
+  transform-origin: center center;
+  background-size: cover;
+  background-position: center right;
+}
+
+@keyframes gaussianblur {
+  from {
+    opacity: 0.1;
+    filter: blur(2px);
+  }
+  to {
+    opacity: 0.3;
+    filter: blur(1px);
+  }
 }
 
 .container h1 {

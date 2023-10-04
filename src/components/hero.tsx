@@ -4,16 +4,12 @@ import { Autoplay } from "swiper/modules";
 import { TbChevronsDown } from "react-icons/tb";
 
 import styles from "./hero.module.css";
-import stars from "@/assets/stars.jpg";
 import "swiper/css";
 
 export default function Hero(): ReactElement {
   return (
     <>
-      <div
-        className={styles.container_background}
-        style={{ backgroundImage: `url(${stars})` }}
-      />
+      <div className={styles.container_background} />
       <div className={styles.container}>
         <h3>Hi, I'm</h3>
         <h1>Danny Nguyen</h1>

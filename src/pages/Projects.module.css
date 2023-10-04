@@ -1,0 +1,33 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  position: relative;
+}
+
+.container h1 {
+  font-size: 36px;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-accent-green),
+      transparent
+    );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
