@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.container .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  max-width: 750px;
+}
+
+.container .grid .icon_group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+}
+
+.container .grid .icon_group svg {
+  max-width: 50px;
+}
+
+.container .grid .icon_group h4 {
+  margin: 0;
+}

@@ -73,3 +73,14 @@
 .next_page:hover {
   color: var(--color-accent-green);
 }
+
+.hero_swiper .swiper-slide {
+  width: 250px !important;
+  height: 40px !important;
+  text-align: center;
+}
+
+.hero_swiper {
+  width: 250px !important;
+  height: 40px !important;
+}

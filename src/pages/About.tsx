@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 
 import styles from "./About.module.css";
 import portrait from "@/assets/portrait.jpg";
+import TechGroup from "@/components/techGroup";
 
 export default function About(): ReactElement {
   return (
@@ -43,10 +44,8 @@ export default function About(): ReactElement {
           </p>
         </div>
       </div>
-      <h2>Tech Stack</h2>
-      <div className={styles.tech}>
-        <p>A</p>
-      </div>
+      <h2>Some tech I've used...</h2>
+      <TechGroup />
     </section>
   );
 }

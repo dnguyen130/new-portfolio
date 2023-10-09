@@ -14,12 +14,13 @@ export default function Hero(): ReactElement {
         <h3>Hi, I'm</h3>
         <h1>Danny Nguyen</h1>
         <Swiper
+          className={styles.hero_swiper}
           modules={[Autoplay]}
-          freeMode
+          freeMode={true}
           direction="vertical"
           spaceBetween={50}
           slidesPerView={1}
-          loop
+          loop={true}
           speed={400}
           autoplay={{
             delay: 3000,
