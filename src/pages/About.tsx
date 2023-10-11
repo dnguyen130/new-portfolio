@@ -34,7 +34,8 @@ export default function About(): ReactElement {
             >
               <span>Digital Design and Development Program</span>
             </a>
-            .
+            . I was then able to apply this learning in a 2 month internship,
+            where I accomplished
           </p>
           <p>
             Currently, I spend my time at the local library, working on various
