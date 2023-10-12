@@ -1,42 +1,43 @@
 import { ReactElement, ReactNode } from "react";
-import { BiChevronDown } from "react-icons/bi";
-import { motion } from "framer-motion";
 
 import styles from "./projectCard.module.css";
 
 interface ProjectCardType {
   title: string;
-  active: boolean;
+  description: string;
+  image_url: string;
   iconArray: ReactNode[];
   HeaderOnClick: () => void;
 }
 
 export default function ProjectCard({
   title,
-  active,
+  description,
+  image_url,
   iconArray,
   HeaderOnClick,
 }: ProjectCardType): ReactElement {
   return (
     <div className={styles.container} onClick={HeaderOnClick}>
       <div className={styles.header}>
+        <h2>{title}</h2>
+      </div>
+      <div className={styles.content}>
         <div className={styles.icon_array}>
-          <h2>{title}</h2>
           {iconArray.map((o) => {
             return o;
           })}
         </div>
-        <div className={styles.arrow_icon}>
-          <BiChevronDown size="100%" />
+        <img src={image_url} />
+        <div>
+          <p>{description}</p>
+          <div className={styles.icon_array_mobile}>
+            {iconArray.map((o) => {
+              return o;
+            })}
+          </div>
         </div>
       </div>
-      <motion.div
-        className={styles.content}
-        initial={{ height: 0 }}
-        animate={{ height: active ? "auto" : 0 }}
-      >
-        <div style={{ width: 100, height: 50, backgroundColor: "red" }} />
-      </motion.div>
     </div>
   );
 }

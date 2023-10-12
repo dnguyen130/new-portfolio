@@ -30,6 +30,7 @@
   display: flex;
   justify-content: space-between;
   gap: 40px;
+  max-width: 720px;
 }
 
 .separator {
@@ -37,4 +38,9 @@
   height: 1px;
   background-color: var(--color-secondary);
   margin: 10px 0;
+}
+
+.project_container {
+  display: flex;
+  flex-direction: column;
 }

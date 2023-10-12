@@ -101,7 +101,7 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-primary: #fbfefe;
+    --color-primary: #e6f5f1;
     --color-accent-blue: #105fc6;
     --color-accent-green: #0f750d;
     --color-secondary: #030911;

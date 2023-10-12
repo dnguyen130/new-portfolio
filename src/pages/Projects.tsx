@@ -19,6 +19,11 @@ const PROJECTS = [
   {
     key: "stepahead",
     name: "Step Ahead",
+    description: `A simple to-do list with user authentication and database handled by
+    Firebase. Track events and record journal entries in a secure web
+    application.`,
+    image_url:
+      "https://res.cloudinary.com/dpc1qjocu/image/upload/v1696897234/stepahead_iubcoy.png",
     icons: [
       <SiReact size="100%" />,
       <SiVite size="100%" />,
@@ -29,6 +34,9 @@ const PROJECTS = [
   {
     key: "scout",
     name: "Scout",
+    description: `A web application designed to browse, favourite, and share your favourite anime.`,
+    image_url:
+      "https://res.cloudinary.com/dpc1qjocu/image/upload/v1697073851/scout_ve2vb6.png",
     icons: [
       <SiReact size="100%" />,
       <SiNextdotjs size="100%" />,
@@ -39,6 +47,10 @@ const PROJECTS = [
   {
     key: "onme",
     name: "OnMe",
+    description: `Cross-platform mobile application created to allow users to order food or drinks to
+    other individuals within a restaurant.`,
+    image_url:
+      "https://res.cloudinary.com/dpc1qjocu/image/upload/v1697074073/OnMe_Dashboard_rrdmoy.png",
     icons: [
       <SiReact size="100%" />,
       <SiExpo size="100%" />,
@@ -49,6 +61,10 @@ const PROJECTS = [
   {
     key: "steady",
     name: "Steady",
+    description: `A web application that guides the user through a series of questions to
+    find a proper solution to everyday problems.`,
+    image_url:
+      "https://res.cloudinary.com/dpc1qjocu/image/upload/v1697074120/Steady_Menu_kdrjei.png",
     icons: [
       <SiReact size="100%" />,
       <SiNextdotjs size="100%" />,
@@ -70,7 +86,8 @@ export default function Projects(): ReactElement {
               title={o.name}
               key={i}
               iconArray={o.icons}
-              active={active === o.key}
+              image_url={o.image_url}
+              description={o.description}
               HeaderOnClick={() => {
                 setActive(active === o.key ? "" : o.key);
               }}
@@ -78,10 +95,11 @@ export default function Projects(): ReactElement {
           );
         } else {
           return (
-            <div key={i}>
+            <div key={i} className={styles.project_container}>
               <ProjectCard
                 title={o.name}
-                active={active === o.key}
+                description={o.description}
+                image_url={o.image_url}
                 iconArray={o.icons}
                 HeaderOnClick={() => {
                   setActive(active === o.key ? "" : o.key);

@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  color: white;
+  color: var(--color-secondary);
   display: flex;
   justify-content: center;
 }
