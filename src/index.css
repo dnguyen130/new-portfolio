@@ -82,6 +82,49 @@ body {
   }
 }
 
+.background_accent,
+.background_accent2,
+.background_accent3,
+.background_accent4 {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 1000px;
+  background: radial-gradient(var(--color-accent-blue) 0%, transparent 60%);
+  opacity: 1;
+  border: none;
+}
+
+.background_accent {
+  left: -250px;
+}
+
+.background_accent2 {
+  right: -200px;
+}
+
+.background_accent3 {
+  left: -200px;
+}
+.background_accent4 {
+  right: -100px;
+}
+
+.landscape {
+  max-width: 400px;
+}
+
+.portrait {
+  max-width: 100px;
+}
+
+.landscape img,
+.portrait img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 @keyframes clippath {
   0%,
   100% {
@@ -101,8 +144,8 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-primary: #e6f5f1;
-    --color-accent-blue: #105fc6;
+    --color-primary: #fbfefe;
+    --color-accent-blue: #2dd9ff;
     --color-accent-green: #0f750d;
     --color-secondary: #030911;
   }

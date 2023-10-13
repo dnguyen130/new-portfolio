@@ -54,7 +54,7 @@ export default function Nav({
             className={styles.links}
             initial={{ height: 0 }}
             animate={{
-              height: active ? 150 : 0,
+              height: active ? 100 : 0,
             }}
             exit={{
               height: 0,
@@ -82,15 +82,6 @@ export default function Nav({
               onClick={onLinkClick}
             >
               Projects
-            </a>
-            <a
-              href="#contact"
-              className={
-                activeSection === "contact" ? styles.active_link : null
-              }
-              onClick={onLinkClick}
-            >
-              Contact
             </a>
           </motion.div>
         )}

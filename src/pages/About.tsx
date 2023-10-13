@@ -1,4 +1,6 @@
 import { ReactElement } from "react";
+import { SiLinkedin, SiGithub } from "react-icons/si";
+import { HiMail } from "react-icons/hi";
 
 import styles from "./About.module.css";
 import portrait from "@/assets/portrait.jpg";
@@ -12,6 +14,24 @@ export default function About(): ReactElement {
         <div className={styles.column}>
           <div className={styles.portrait}>
             <img src={portrait} />
+            <div className={styles.social_container}>
+              <a
+                href="https://www.linkedin.com/in/dannytnguyendev/"
+                target="_blank"
+              >
+                <SiLinkedin size="70%" />
+              </a>
+              <a href="https://github.com/dnguyen130" target="_blank">
+                <SiGithub size="70%" />
+              </a>
+              <a
+                href="mailto:dannytnguyen.dev@gmail.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <HiMail size="70%" />
+              </a>
+            </div>
           </div>
         </div>
         <div className={styles.column}>

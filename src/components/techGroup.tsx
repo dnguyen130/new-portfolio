@@ -11,6 +11,7 @@ import {
   SiVite,
   SiStyledcomponents,
   SiSass,
+  SiNextdotjs,
 } from "react-icons/si";
 
 import styles from "./techGroup.module.css";
@@ -37,6 +38,10 @@ const TECH_ICONS = [
     name: "Node.js",
   },
   {
+    element: <SiNextdotjs size="100%" />,
+    name: "Next.js",
+  },
+  {
     element: <SiFirebase size="100%" />,
     name: "Firebase",
   },
@@ -46,7 +51,7 @@ const TECH_ICONS = [
   },
   {
     element: <SiStyledcomponents size="100%" />,
-    name: "Styled-Components",
+    name: "Styled",
   },
   {
     element: <SiSass size="100%" />,
