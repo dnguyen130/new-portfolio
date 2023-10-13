@@ -16,7 +16,7 @@ function App() {
 
   // Navigation Functions
 
-  const [activeSection, setActiveSection] = useState<string | null>("");
+  const [activeSection, setActiveSection] = useState<string | null>("home");
 
   useEffect(() => {
     const handleScroll = () => {
