@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: center;
   transition: 0.2s;
+  box-shadow: 0 3px 5px 2px var(--color-primary);
 }
 
 .container:hover {
