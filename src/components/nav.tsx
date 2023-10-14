@@ -54,7 +54,7 @@ export default function Nav({
             className={styles.links}
             initial={{ height: 0 }}
             animate={{
-              height: active ? 100 : 0,
+              height: active ? 150 : 0,
             }}
             exit={{
               height: 0,
@@ -82,6 +82,9 @@ export default function Nav({
               onClick={onLinkClick}
             >
               Projects
+            </a>
+            <a href="/resume.pdf" target="_blank">
+              Resume
             </a>
           </motion.div>
         )}
