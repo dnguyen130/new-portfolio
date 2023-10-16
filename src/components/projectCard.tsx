@@ -57,8 +57,16 @@ export default function ProjectCard({
             <a href={github} target="_blank">
               Github
             </a>
-            {server && <a>Server Github</a>}
-            {youtube && <a>Video Link</a>}
+            {server && (
+              <a href={server} target="_blank">
+                Server Github
+              </a>
+            )}
+            {youtube && (
+              <a href={youtube} target="_blank">
+                Video Link
+              </a>
+            )}
           </div>
         </div>
       </div>

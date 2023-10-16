@@ -10,7 +10,7 @@ import styles from "./nav.module.css";
 interface NavType {
   active: boolean;
   activeSection: string | null;
-  onIconClick: () => void;
+  onIconClick: (e: React.MouseEvent) => void;
   onLinkClick: () => void;
 }
 

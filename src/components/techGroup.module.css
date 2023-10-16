@@ -23,7 +23,7 @@
   width: 120px;
   height: 120px;
   padding: 10px;
-  border: 1px solid var(--color-accent-green);
+  border: 2px solid var(--color-accent-green);
   border-radius: 10px;
 }
 

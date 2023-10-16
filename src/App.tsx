@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import BackToTop from "./components/backToTop";
+import Footer from "./components/footer";
+import Contact from "./pages/Contact";
 
 function App() {
   const [active, setActive] = useState(false);
@@ -16,25 +18,25 @@ function App() {
 
   // Navigation Functions
 
-  const [activeSection, setActiveSection] = useState<string | null>("home");
+  // const [activeSection, setActiveSection] = useState<string | null>("home");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
+      // const sections = document.querySelectorAll("section");
       const scrollPosition = window.scrollY;
       setPosY(scrollPosition / 15);
       setPosY2(scrollPosition / 7);
       setPosY3(scrollPosition / 6);
       setPosY4(scrollPosition / 5);
 
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+      // sections.forEach((section) => {
+      //   const sectionTop = section.offsetTop;
+      //   const sectionHeight = section.clientHeight;
 
-        if (scrollPosition >= sectionTop - sectionHeight / 3) {
-          setActiveSection(section.getAttribute("id"));
-        }
-      });
+      //   if (scrollPosition >= sectionTop - sectionHeight / 3) {
+      //     setActiveSection(section.getAttribute("id"));
+      //   }
+      // });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -43,17 +45,14 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    if (activeSection) {
-      history.replaceState(true, "", "#" + activeSection);
-    }
-    if (activeSection !== "home") {
-      setActive(false);
-    }
-  }, [activeSection]);
+  // useEffect(() => {
+  //   if (activeSection) {
+  //     history.replaceState(true, "", "#" + activeSection);
+  //   }
+  // }, [activeSection]);
 
   return (
-    <div className="page_cont">
+    <div className="page_cont" onClick={() => setActive(false)}>
       <motion.div
         className="background_accent"
         style={{ top: posY + 200 }}
@@ -80,14 +79,19 @@ function App() {
       />
       <Nav
         active={active}
-        onIconClick={() => setActive(!active)}
+        onIconClick={(e) => {
+          e.stopPropagation();
+          setActive(!active);
+        }}
         onLinkClick={() => setActive(false)}
-        activeSection={activeSection}
+        activeSection={null}
       />
-      <BackToTop isVisible={activeSection !== "home" ? true : false} />
+      <BackToTop isVisible={false} />
       <Home />
       <About />
       <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }
