@@ -1,7 +1,6 @@
 import { ReactElement, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { SiLinkedin, SiGithub } from "react-icons/si";
-import { HiMail } from "react-icons/hi";
 
 import styles from "./Contact.module.css";
 
