@@ -93,11 +93,13 @@
   border-color: var(--color-accent-green);
 }
 
-.container form button {
+.submit_button,
+.submit_button_disabled {
   background-color: var(--color-secondary);
   color: var(--color-primary);
   margin-top: 20px;
-  padding: 10px 40px;
+  width: 150px;
+  height: 40px;
   border: none;
   border-radius: 5px;
   font-weight: 600;
@@ -107,8 +109,12 @@
   box-shadow: 0 3px 5px 2px var(--color-primary);
 }
 
-.container form button:hover {
+.submit_button:hover {
   background-color: var(--color-accent-green);
+}
+
+.submit_button_disabled {
+  pointer-events: none;
 }
 
 .social_container {
