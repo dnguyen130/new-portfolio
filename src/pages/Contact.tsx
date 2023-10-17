@@ -10,7 +10,7 @@ export default function Contact(): ReactElement {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [modal, setModal] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(true);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,12 +30,14 @@ export default function Contact(): ReactElement {
       )
       .then(
         (result: { text: string }) => {
+          document.body.style.overflow = "hidden";
           contactForm.reset();
           setLoading(false);
           setModal(true);
           console.log(result.text);
         },
         (error: { text: string }) => {
+          document.body.style.overflow = "hidden";
           setLoading(false);
           setError(true);
           console.log(error.text);
@@ -45,8 +47,20 @@ export default function Contact(): ReactElement {
 
   return (
     <div className={styles.container}>
-      <EmailModal active={modal} ModalButtonOnClick={() => setModal(false)} />
-      <ErrorModal active={error} ModalButtonOnClick={() => setError(false)} />
+      <EmailModal
+        active={modal}
+        ModalButtonOnClick={() => {
+          setModal(false);
+          document.body.style.overflow = "auto";
+        }}
+      />
+      <ErrorModal
+        active={error}
+        ModalButtonOnClick={() => {
+          setError(false);
+          document.body.style.overflow = "auto";
+        }}
+      />
       <h1>Let's Chat</h1>
       <div className={styles.content}>
         <h3>Contact me through my socials,</h3>
