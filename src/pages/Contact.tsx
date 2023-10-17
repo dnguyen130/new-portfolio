@@ -10,7 +10,7 @@ export default function Contact(): ReactElement {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [modal, setModal] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(true);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,7 +46,7 @@ export default function Contact(): ReactElement {
   };
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container} id="contact">
       <EmailModal
         active={modal}
         ModalButtonOnClick={() => {
@@ -97,6 +97,6 @@ export default function Contact(): ReactElement {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }

@@ -18,25 +18,25 @@ function App() {
 
   // Navigation Functions
 
-  // const [activeSection, setActiveSection] = useState<string | null>("home");
+  const [activeSection, setActiveSection] = useState<string | null>("home");
 
   useEffect(() => {
     const handleScroll = () => {
-      // const sections = document.querySelectorAll("section");
+      const sections = document.querySelectorAll("section");
       const scrollPosition = window.scrollY;
       setPosY(scrollPosition / 15);
       setPosY2(scrollPosition / 7);
       setPosY3(scrollPosition / 6);
       setPosY4(scrollPosition / 5);
 
-      // sections.forEach((section) => {
-      //   const sectionTop = section.offsetTop;
-      //   const sectionHeight = section.clientHeight;
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
 
-      //   if (scrollPosition >= sectionTop - sectionHeight / 3) {
-      //     setActiveSection(section.getAttribute("id"));
-      //   }
-      // });
+        if (scrollPosition >= sectionTop - sectionHeight / 3) {
+          setActiveSection(section.getAttribute("id"));
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -45,11 +45,11 @@ function App() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   if (activeSection) {
-  //     history.replaceState(true, "", "#" + activeSection);
-  //   }
-  // }, [activeSection]);
+  useEffect(() => {
+    if (activeSection) {
+      history.replaceState(true, "", "#" + activeSection);
+    }
+  }, [activeSection]);
 
   return (
     <div className="page_cont" onClick={() => setActive(false)}>
@@ -84,9 +84,9 @@ function App() {
           setActive(!active);
         }}
         onLinkClick={() => setActive(false)}
-        activeSection={null}
+        activeSection={activeSection}
       />
-      <BackToTop isVisible={false} />
+      <BackToTop isVisible={activeSection !== "home"} />
       <Home />
       <About />
       <Projects />

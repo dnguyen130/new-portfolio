@@ -1,10 +1,11 @@
 .container {
-  width: 100%;
+  position: absolute;
+  width: 100vw;
+  left: 0;
   padding: 10px;
-  background-color: var(--color-accent-blue);
+  background-color: var(--color-accent-green);
   opacity: 0.8;
   color: var(--color-primary);
-  position: relative;
   z-index: 20;
   display: grid;
   place-items: center center;
