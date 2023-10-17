@@ -10,7 +10,7 @@ export default function Contact(): ReactElement {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [modal, setModal] = useState(false);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
