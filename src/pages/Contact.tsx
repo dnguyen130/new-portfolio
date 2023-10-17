@@ -4,15 +4,20 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 import EmailModal from "@/components/emailModal";
 
 import styles from "./Contact.module.css";
+import ErrorModal from "@/components/errorModal";
 
 export default function Contact(): ReactElement {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [modal, setModal] = useState(false);
+  const [error, setError] = useState(true);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    const contactForm = document.getElementById(
+      "contact_form",
+    ) as HTMLFormElement;
     const currentForm = form.current;
     if (currentForm == null) return;
 
@@ -25,15 +30,14 @@ export default function Contact(): ReactElement {
       )
       .then(
         (result: { text: string }) => {
-          const contactForm = document.getElementById(
-            "contact_form",
-          ) as HTMLFormElement;
           contactForm.reset();
           setLoading(false);
           setModal(true);
           console.log(result.text);
         },
         (error: { text: string }) => {
+          setLoading(false);
+          setError(true);
           console.log(error.text);
         },
       );
@@ -42,6 +46,7 @@ export default function Contact(): ReactElement {
   return (
     <div className={styles.container}>
       <EmailModal active={modal} ModalButtonOnClick={() => setModal(false)} />
+      <ErrorModal active={error} ModalButtonOnClick={() => setError(false)} />
       <h1>Let's Chat</h1>
       <div className={styles.content}>
         <h3>Contact me through my socials,</h3>
