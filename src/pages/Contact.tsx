@@ -77,6 +77,8 @@ export default function Contact(): ReactElement {
         </div>
         <h3>Or send me a message directly.</h3>
         <form onSubmit={onSubmit} ref={form} id="contact_form">
+          <label htmlFor="user_email">Email</label>
+          <input type="email" id="user_email" name="user_email" required />
           <label htmlFor="user_name">Name</label>
           <input type="text" id="user_name" name="user_name" required />
           <label htmlFor="subject">Subject</label>
