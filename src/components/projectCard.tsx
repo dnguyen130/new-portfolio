@@ -1,13 +1,18 @@
-import { ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 
 import styles from "./projectCard.module.css";
+
+interface IconArrayType {
+  name: string;
+  link: string;
+}
 
 interface ProjectCardType {
   title: string;
   description: string;
   image_url: string;
   image_style: string;
-  iconArray: ReactNode[];
+  iconArray: IconArrayType[];
   HeaderOnClick: () => void;
   demo?: string;
   server?: string;
@@ -35,7 +40,11 @@ export default function ProjectCard({
       <div className={styles.content}>
         <div className={styles.icon_array}>
           {iconArray.map((o) => {
-            return o;
+            return (
+              <a href={o.link} className={styles.tech_name} target="_blank">
+                {o.name}
+              </a>
+            );
           })}
         </div>
         <div className={image_style}>
@@ -45,7 +54,11 @@ export default function ProjectCard({
           <p>{description}</p>
           <div className={styles.icon_array_mobile}>
             {iconArray.map((o) => {
-              return o;
+              return (
+                <a href={o.link} className={styles.tech_name} target="_blank">
+                  {o.name}
+                </a>
+              );
             })}
           </div>
           <div className={styles.button_container}>

@@ -3,7 +3,6 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
 
 import styles from "./About.module.css";
-import portrait from "@/assets/portrait.jpg";
 import TechGroup from "@/components/techGroup";
 
 export default function About(): ReactElement {
@@ -13,7 +12,7 @@ export default function About(): ReactElement {
       <div className={styles.content}>
         <div className={styles.column}>
           <div className={styles.portrait}>
-            <img src={portrait} />
+            <img src="https://res.cloudinary.com/dpc1qjocu/image/upload/v1698282465/headshot_small_ujwq37.png" />
             <div className={styles.social_container}>
               <a
                 href="https://www.linkedin.com/in/dannytnguyendev/"

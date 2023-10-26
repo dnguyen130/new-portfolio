@@ -40,8 +40,10 @@
 
 .icon_array {
   display: flex;
-  gap: 40px;
+  justify-content: center;
+  gap: 5px 20px;
   margin: 10px 0;
+  flex-wrap: wrap;
 }
 
 .icon_array svg,
@@ -57,7 +59,7 @@
 .button_container {
   width: 100%;
   max-width: 600px;
-  margin-top: 10px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -90,6 +92,20 @@
   background-color: var(--color-accent-green);
 }
 
+.tech_name {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: 2px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.tech_name:hover {
+  background-color: var(--color-accent-green);
+}
+
 @media screen and (min-width: 768px) {
   .content {
     display: grid;
@@ -108,9 +124,10 @@
   .icon_array_mobile {
     display: flex;
     width: 100%;
-    max-width: 400px;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 10px;
+    gap: 5px 20px;
+    flex-wrap: wrap;
   }
 
   .button_container {

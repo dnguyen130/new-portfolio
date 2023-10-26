@@ -71,7 +71,7 @@
 }
 
 .portrait img {
-  max-height: 300px;
+  max-height: 200px;
   border-radius: 10px;
 }
 
@@ -119,5 +119,10 @@
   .portrait {
     width: 250px;
     height: 300px;
+  }
+
+  .portrait img {
+    width: 100%;
+    max-height: none;
   }
 }

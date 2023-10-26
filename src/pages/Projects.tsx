@@ -2,19 +2,6 @@ import { ReactElement, useState } from "react";
 import ProjectCard from "@/components/projectCard";
 
 import styles from "./Projects.module.css";
-import {
-  SiExpo,
-  SiFirebase,
-  SiFramer,
-  SiMongodb,
-  SiMysql,
-  SiNextdotjs,
-  SiPhp,
-  SiReact,
-  SiSass,
-  SiStyledcomponents,
-  SiVite,
-} from "react-icons/si";
 
 const PROJECTS = [
   {
@@ -29,10 +16,22 @@ const PROJECTS = [
     demo: "https://stepahead.vercel.app/",
     github: "https://github.com/dnguyen130/stepahead",
     icons: [
-      <SiReact size="100%" />,
-      <SiVite size="100%" />,
-      <SiSass size="100%" />,
-      <SiFirebase size="100%" />,
+      {
+        name: "React",
+        link: "https://react.dev/",
+      },
+      {
+        name: "Vite",
+        link: "https://vitejs.dev/",
+      },
+      {
+        name: "Sass",
+        link: "https://sass-lang.com/",
+      },
+      {
+        name: "Firebase",
+        link: "https://firebase.google.com/",
+      },
     ],
   },
   {
@@ -47,9 +46,18 @@ const PROJECTS = [
     demo: "https://best-buy-clone-2d1056.netlify.app/",
     github: "https://github.com/dnguyen130/bestbuy-clone",
     icons: [
-      <SiReact size="100%" />,
-      <SiVite size="100%" />,
-      <SiFramer size="100%" />,
+      {
+        name: "React.js",
+        link: "https://react.dev/",
+      },
+      {
+        name: "Vite",
+        link: "https://vitejs.dev/",
+      },
+      {
+        name: "Framer-Motion",
+        link: "https://www.framer.com/motion/",
+      },
     ],
   },
   {
@@ -64,10 +72,22 @@ const PROJECTS = [
     server: "https://github.com/wilyyy/scout-serverside",
     github: "https://github.com/wilyyy/Scout",
     icons: [
-      <SiReact size="100%" />,
-      <SiNextdotjs size="100%" />,
-      <SiStyledcomponents size="100%" />,
-      <SiMongodb size="100%" />,
+      {
+        name: "React.js",
+        link: "https://react.dev/",
+      },
+      {
+        name: "Next.js",
+        link: "https://nextjs.org/",
+      },
+      {
+        name: "Styled-Components",
+        link: "https://styled-components.com/",
+      },
+      {
+        name: "MongoDB",
+        link: "https://www.mongodb.com/",
+      },
     ],
   },
   {
@@ -82,10 +102,22 @@ const PROJECTS = [
     demo: "https://v1.dannynguyen.ca/",
     github: "https://github.com/dnguyen130/portfolio_v1",
     icons: [
-      <SiReact size="100%" />,
-      <SiNextdotjs size="100%" />,
-      <SiStyledcomponents size="100%" />,
-      <SiFramer size="100%" />,
+      {
+        name: "React.js",
+        link: "https://react.dev/",
+      },
+      {
+        name: "Next.js",
+        link: "https://nextjs.org/",
+      },
+      {
+        name: "Styled-Components",
+        link: "https://styled-components.com/",
+      },
+      {
+        name: "Framer-Motion",
+        link: "https://www.framer.com/motion/",
+      },
     ],
   },
   {
@@ -101,10 +133,10 @@ const PROJECTS = [
     server: "https://github.com/dnguyen130/OnMe-Serverside",
     youtube: "https://www.youtube.com/watch?v=1NiF7avZNEI",
     icons: [
-      <SiReact size="100%" />,
-      <SiExpo size="100%" />,
-      <SiMysql size="100%" />,
-      <SiPhp size="100%" />,
+      { name: "React Native", link: "https://reactnative.dev/" },
+      { name: "Expo", link: "https://expo.dev/" },
+      { name: "MySQL", link: "https://www.mysql.com/" },
+      { name: "PHP", link: "https://www.php.net/" },
     ],
   },
   {
@@ -119,9 +151,9 @@ const PROJECTS = [
     github: "https://github.com/wilyyy/Steady",
     demo: "https://steadyofficial.vercel.app/",
     icons: [
-      <SiReact size="100%" />,
-      <SiNextdotjs size="100%" />,
-      <SiStyledcomponents size="100%" />,
+      { name: "React", link: "https://react.dev/" },
+      { name: "Next.js", link: "https://nextjs.org/" },
+      { name: "Styled-Components", link: "https://styled-components.com/" },
     ],
   },
 ];
