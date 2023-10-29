@@ -39,9 +39,14 @@ export default function ProjectCard({
       </div>
       <div className={styles.content}>
         <div className={styles.icon_array}>
-          {iconArray.map((o) => {
+          {iconArray.map((o, i) => {
             return (
-              <a href={o.link} className={styles.tech_name} target="_blank">
+              <a
+                key={i}
+                href={o.link}
+                className={styles.tech_name}
+                target="_blank"
+              >
                 {o.name}
               </a>
             );
@@ -53,9 +58,14 @@ export default function ProjectCard({
         <div className={styles.content_rightside}>
           <p>{description}</p>
           <div className={styles.icon_array_mobile}>
-            {iconArray.map((o) => {
+            {iconArray.map((o, i) => {
               return (
-                <a href={o.link} className={styles.tech_name} target="_blank">
+                <a
+                  key={i}
+                  href={o.link}
+                  className={styles.tech_name}
+                  target="_blank"
+                >
                   {o.name}
                 </a>
               );

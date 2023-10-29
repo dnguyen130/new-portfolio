@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { TbChevronsDown } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 import styles from "./hero.module.css";
@@ -33,8 +32,7 @@ const item = {
 
 export default function Hero(): ReactElement {
   return (
-    <>
-      <div className={styles.container_background} />
+    <div className={styles.hero}>
       <motion.div
         className={styles.container}
         variants={container}
@@ -75,9 +73,6 @@ export default function Hero(): ReactElement {
           Currently working on projects while seeking career opportunities.
         </motion.p>
       </motion.div>
-      <a className={styles.next_page} href="#about">
-        <TbChevronsDown size="100%" />
-      </a>
-    </>
+    </div>
   );
 }

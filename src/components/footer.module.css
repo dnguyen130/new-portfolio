@@ -4,9 +4,9 @@
   left: 0;
   padding: 10px;
   background-color: var(--color-accent-green);
-  opacity: 0.8;
+  opacity: 1;
   color: var(--color-primary);
-  z-index: 20;
+  z-index: 200;
   display: grid;
   place-items: center center;
   font-weight: 600;
