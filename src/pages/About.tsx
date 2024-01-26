@@ -53,11 +53,12 @@ export default function About(): ReactElement {
             >
               <span>Digital Design and Development Program</span>
             </a>
-            . I was then able to apply this learning in a 2 month internship,
-            where I accomplished
+            . I was then able to apply this learning in a 2 month internship as a Front End Developer Intern.
+            I fixed various bugs, modified existing features, and created features of my own. I took many
+            techniques and skills I learned from the senior developers there and apply it to my code to this day.
           </p>
           <p>
-            Currently, I spend my time at the local library, working on various
+            Currently, when I'm not working, I spend my time at the local library, working on various
             personal web projects to hone my development skills while also
             learning new web technologies. In my spare time, I love playing
             games, like Final Fantasy XIV and Path of Exile.{" "}
